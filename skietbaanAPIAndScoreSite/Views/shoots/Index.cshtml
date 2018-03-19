@@ -1,0 +1,81 @@
+﻿@model IEnumerable<skietbaanAPIAndScoreSite.Models.shoot>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Compititions.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.msisdn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entrydate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_month)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.compavg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.yearlytop4score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.monthlybestscore)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Compititions.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.msisdn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.entrydate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_month)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.compavg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.yearlytop4score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.monthlybestscore)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.pkid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.pkid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.pkid })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,32 @@
+﻿<div ng-controller="ScoreOverview">
+    <h2>Overview Of Last Shoots</h2>
+    <h3>Results per shoot</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <select id="AllCompes" class="form-control" name="selectCompetition" ng-change="changecomp()" ng-model="selectedCompetition" ng-options="item as item.description for item in Competitions">
+                <option value="">Please Select...</option>
+            </select>
+
+        </div>
+        <div class="col-md-4">
+
+            <label>
+                2018
+                <input type="checkbox" ng-model="thisyear" ng-change="changecomp()">
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+                </div>
+            <div ui-grid="{ data: gridData }" class="myGrid">
+        </div>
+    </div>
+    <h3>Yealy Results</h3>
+    <div class="row">
+        <div class="col-md-12">
+           
+            <div ui-grid="{ data: gridData2 }" class="myGrid"></div>
+        </div>
+    </div>
+</div>

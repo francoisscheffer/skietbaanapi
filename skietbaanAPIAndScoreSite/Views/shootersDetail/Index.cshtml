@@ -1,0 +1,57 @@
+﻿@model IEnumerable<skietbaanAPIAndScoreSite.Models.shooter>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.msisdn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bmember)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pws)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.msisdn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bmember)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pws)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.pkid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.pkid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.pkid })
+        </td>
+    </tr>
+}
+
+</table>

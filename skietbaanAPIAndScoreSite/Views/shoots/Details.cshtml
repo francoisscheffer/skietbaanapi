@@ -1,0 +1,90 @@
+﻿@model skietbaanAPIAndScoreSite.Models.shoot
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>shoot</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Compititions.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Compititions.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msisdn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msisdn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.entrydate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.entrydate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_month)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_month)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compavg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compavg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.yearlytop4score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.yearlytop4score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monthlybestscore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monthlybestscore)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pkid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

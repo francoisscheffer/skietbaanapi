@@ -1,0 +1,58 @@
+﻿@model skietbaanAPIAndScoreSite.Models.shooter
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>shooter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.msisdn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msisdn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bmember)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bmember)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pws)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pws)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pkid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
