@@ -8,7 +8,7 @@ namespace skietbaanAPIAndScoreSite.Models
     public partial class SkietbaanDatabase : DbContext
     {
         public SkietbaanDatabase()
-            : base("name=SkietbaanDatabase1")
+            : base("name=SkietbaanDatabase")
         {
         }
 
