@@ -9,9 +9,10 @@ namespace skietbaanAPIAndScoreSite.Models
     [Table("shooter")]
     public partial class shooter
     {
-        [Key]
+       
         public int pkid { get; set; }
 
+        [Key]
         [StringLength(50)]
         public string msisdn { get; set; }
 
@@ -25,5 +26,9 @@ namespace skietbaanAPIAndScoreSite.Models
 
         [StringLength(50)]
         public string pws { get; set; }
+
+        [NotMapped]
+        public string Detail
+        { get {return name+" "+surname+" "+msisdn ; } }
     }
 }

@@ -18,7 +18,11 @@ namespace skietbaanAPIAndScoreSite.Controllers
         // GET: shoots
         public async Task<ActionResult> Index()
         {
-            var shoots = db.shoots;//.Include(s => s.competition);
+
+            var t = Request.UserHostName;
+
+
+            var shoots = db.shoots.Include(s => s.Compititions);
             return View(await shoots.ToListAsync());
         }
 
@@ -41,6 +45,7 @@ namespace skietbaanAPIAndScoreSite.Controllers
         public ActionResult Create()
         {
             ViewBag.fkcompetition = new SelectList(db.competitions, "pkid", "description");
+            ViewBag.msisdn = new SelectList(db.shooters.OrderBy(c=>c.name), "msisdn", "Detail");
             return View();
         }
 

@@ -12,8 +12,12 @@ namespace skietbaanAPIAndScoreSite.Models
         [Key]
         public int pkid { get; set; }
 
+        [ForeignKey("Shooter")]
         [StringLength(50)]
         public string msisdn { get; set; }
+        public virtual shooter Shooter { get; set; }
+
+
 
         public DateTime? entrydate { get; set; }
 
